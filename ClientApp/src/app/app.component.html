@@ -10,14 +10,15 @@
   <div class="app-content">
     <div class="app-content-inner">
       <h2>The Scoop</h2> 
-      <div class="app-articles" *ngFor="let article of articles">
-          <div class="app-articles-title">
-            {{article.title}}
-          </div>
-          <div class="app-articles-body">
-            {{article.body}}
-          </div>
-      </div>
+      <ul>
+        <li class="app-articles" *ngFor="let story of stories">
+          <span class="app-articles-title"><a href="{{story.url}}" target="_blank">{{story.title}}</a></span><br>
+          <span class="app-articles-light-gray">
+            <fa-icon [icon]="['fas', 'user']"></fa-icon>&nbsp;&nbsp;{{story.by}}&nbsp;&nbsp;&nbsp;&nbsp;
+            <fa-icon [icon]="['fas', 'calendar-alt']"></fa-icon>&nbsp;&nbsp;{{story.time.toLocaleString()}}<br><br>
+          </span>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

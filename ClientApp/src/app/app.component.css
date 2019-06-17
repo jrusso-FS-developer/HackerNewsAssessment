@@ -39,7 +39,8 @@
 }
 
 .app-articles {
-    padding: 0 25px;    
+    padding: 0 25px;   
+    list-style: none; 
 }
 
 .app-articles-title {
@@ -47,6 +48,30 @@
     font-size: 18px;
 }
 
+.app-articles-title > a {
+    text-decoration: none;
+    color: #273B66;
+}
+
+.app-articles-title > a:visited {
+    text-decoration: none;
+    color: #273B66;
+}
+
+.app-articles-title > a:link {
+    text-decoration: none;
+    color: #273B66;
+}
+
+.app-articles-title > a:hover {
+    text-decoration: underline;
+    color: #273B66;
+}
+
 .app-articles-body {
     font-size: 16px;
+}
+
+.app-articles-light-gray {
+    color: darkgray;
 }
