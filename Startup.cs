@@ -1,3 +1,5 @@
+using HackerNews.Framework.Services.Classes;
+using HackerNews.Framework.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +28,8 @@ namespace HackerNews
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddScoped<IHackerNewsService, HackerNewsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
